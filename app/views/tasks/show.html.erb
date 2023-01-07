@@ -1,0 +1,14 @@
+<div class="container mt-3">
+  <div class="card mb-3">
+    <div class="card-body">
+      <h1><%= @task.title %></h1><%= link_to "Edit this task", edit_task_path, :class => "btn btn-primary float-end" %>
+      <p>🔎  <%= @task.details %></p>
+      <% if @task.completed == true %>
+        <p><%= "✅ This task is completed!" %></p>
+      <% else %>
+        <p><%= "❌ This task is not completed!" %></p>
+      <% end %>
+    </div>
+  </div>
+  <p>📝  <%= link_to "Back to My Tasks", tasks_path %></p>
+</div>

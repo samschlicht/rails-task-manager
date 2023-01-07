@@ -1,0 +1,19 @@
+<div class="container mt-3">
+  <h1>My Tasks 🧹 🏃‍ ‍👨‍💻</h1>
+  <ul class="list-group mb-3">
+    <% @tasks.each do |task| %>
+      <li class="list-group-item">
+        <%= task.title %><br><br>
+        <% if task.completed == true %>
+          <p><%= "✅ This task is completed!" %></p>
+        <% else %>
+          <p><%= "❌ This task is not completed!" %></p>
+        <% end %>
+        <br>🔎  <%= link_to "Details...", task_path(task) %>
+        🗑️  <%= link_to "Delete this task",
+                        task_path(task),
+                        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
+    <% end %>
+  </ul>
+  <p>➕  <%= link_to "Add a new task", new_task_path %></p>
+</div>

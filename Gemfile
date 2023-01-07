@@ -15,6 +15,9 @@ gem "sqlite3", "~> 1.4"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 
+# simple form
+gem 'simple_form'
+
 # custom gems
 gem 'font-awesome-sass', '~> 5.15.1'
 

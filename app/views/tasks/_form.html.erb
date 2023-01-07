@@ -1,0 +1,20 @@
+  <%= form_with model: task do |f| %>
+  <div class="card mb-3">
+    <div class="card-body">
+      <div class="mb-3">
+        <%= f.label :title, { class: "form-label"} %>
+        <%= f.text_field :title, { class: "form-control", placeholder: "Type here" } %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :details, { class: "form-label"} %>
+        <%= f.text_field :details, { class: "form-control", placeholder: "Type here" } %>
+      </div>
+      <div class="mb-3">
+        <%= f.check_box :completed, { class: "form-check-input" } %>
+        <%= f.label :completed, { class: "form-label"} %>
+      </div>
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
+  </div>
+  <% end %>
+  <p>📝  <%= link_to "Back to My Tasks", tasks_path %></p>
